@@ -509,7 +509,6 @@ class Eventos():
     def on_btnImprimir_clicked(self, widget):
         try:
             impresion.factura(datosfactura, datosfactura2)
-            impresionclientes.listaclientes()
         except:
             print('error impresion')
 
