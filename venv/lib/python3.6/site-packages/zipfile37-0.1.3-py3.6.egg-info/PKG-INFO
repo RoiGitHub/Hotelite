@@ -1,0 +1,28 @@
+Metadata-Version: 1.1
+Name: zipfile37
+Version: 0.1.3
+Summary: Read and write ZIP files - backport of the zipfile module from Python 3.7
+Home-page: https://github.com/markus1978/zipfile37
+Author: Markus Scheidgen, Thomas Kluyver
+Author-email: markus.scheidgen@gmail.com
+License: UNKNOWN
+Description: This is a backport of the zipfile module from Python 3.7, which contains some
+        improvements. Cloned from the 3.6 backport of Thomas Kluyver (https://gitlab.com/takluyver/zipfile36).
+        
+        Installation::
+        
+            pip install zipfile37
+        
+        Suggested usage:
+        
+        .. code:: python
+        
+            if sys.version_info >= (3, 7):
+                import zipfile
+            else:
+                import zipfile37 as zipfile
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Python Software Foundation License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: System :: Archiving :: Compression

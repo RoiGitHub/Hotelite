@@ -1,0 +1,53 @@
+"""
+
+Для того чтобы API могло нормально работать с классами таблиц, нужно создать эти классы.
+Для того чтобы определить тип столбца используем типы из файла utils.py, всего доступно 4 типа данных:
+строка(string()), число(integer()), список(list_()), словарь(dict_()).
+Если первые 2 есть в sqlite3, то последних нет. В таблице они определяется как - TEXT,
+но при команде filter с параметром ret_type='classes',
+поля с этом типом данных конвертируются в список или словарь.
+
+WARNING: Поле id должно быть обязательно!!!
+
+После создания классов таблиц нам нужно передать их в переменую data_bases.
+После чего создать функцию get(table_name). Сделать её нужно такой же как и в этом файле.
+Обратите внимание, названия классов в этой функции должны быть написанны строчными(не заглавными) буквами.
+
+После полного оформления этого файла обратитесь к файлу
+create_database.py в папке test
+
+"""
+
+from .utils import *
+
+
+class SchoolChildren:
+    def __init__(self):
+        self.id = None
+
+        self.first_name = string()
+        self.last_name = string()
+        self.age = integer()
+        self.cls = integer()
+        self.evaluation = list_()
+
+
+class Students:
+    def __init__(self):
+        self.id = None
+
+        self.first_name = string()
+        self.last_name = string()
+        self.age = integer()
+        self.course = integer()
+        self.salary = integer()
+
+
+data_bases = [SchoolChildren(), Students()]
+
+
+def get(table_name):
+    if table_name == 'schoolchildren':
+        return SchoolChildren()
+    elif table_name == 'students':
+        return Students()
