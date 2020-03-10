@@ -484,28 +484,6 @@ class Eventos():
         except:
             print('error baja reserva')
 
-    # def on_btnBajares_clicked(self, widget):
-    #     try:
-    #         chko = variables.filareserva[3].get_text()
-    #         today = date.today()
-    #         print(chko)
-    #
-    #         hoy = datetime.strftime(today,'%d/%m/%Y')
-    #         print(hoy)
-    #         registro = (variables.numhabres)
-    #         if str(hoy) == str(chko):
-    #             funcioneshab.modifhabres(registro)
-    #             funcioneshab.listadohab(variables.listhab)
-    #         else:
-    #             print('puede facturar')
-    #             funcionesreser.bajareserva(variables.codr)
-    #             funcionesreser.limpiarentry(variables.filareserva)
-    #             funcionesreser.listadores()
-    #             #cambiar el estado de la habitacion de ocupada a libre
-    #
-    #     except:
-    #         print('error en checkout')
-
     def on_btnImprimir_clicked(self, widget):
         try:
             impresion.factura(datosfactura, datosfactura2)
