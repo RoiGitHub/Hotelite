@@ -597,7 +597,7 @@
                         <property name="can_focus">False</property>
                         <property name="label" translatable="yes">CLIENTE</property>
                         <attributes>
-                          <attribute name="foreground" value="#efef29292929"/>
+                          <attribute name="foreground" value="#34346565a4a4"/>
                         </attributes>
                       </object>
                       <packing>
