@@ -126,14 +126,6 @@ class Empresa:
         #conectamos
         self.b.connect_signals(eventos.Eventos())
 
-        #conexion estilos
-
-        self.set_style()
-        menubar.add_class('menuBar')
-        '''
-        for i in range(len(variables.menserror)):
-            variables.menserror[i].add_class('label')
-        '''
         vprincipal.show_all()
         vprincipal.maximize()
         conexion.Conexion().abrirbbdd()
@@ -144,19 +136,6 @@ class Empresa:
         funcioneshab.listadohab(variables.listhab)
         funcionesvar.controlhab()
         funcionesser.precios()
-
-    def set_style(self):
-        """
-        aplica estilos css a nuestra aplicacion
-        :return:
-        """
-        css_provider = Gtk.CssProvider()
-        css_provider.load_from_path('estilos.css')
-        Gtk.StyleContext().add_provider_for_screen(
-            Gdk.Screen.get_default(),
-            css_provider,
-            Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
-        )
 
 
 if __name__=='__main__':
