@@ -50,7 +50,8 @@ def listaser():
     :return: return: listado servicios
     """
     try:
-        conexion.cur.execute('select * from servicios')
+        codigoreserva = variables.mensfac[3].get_text()
+        conexion.cur.execute('select * from servicios where codres = ?',(codigoreserva,))
         listado = conexion.cur.fetchall()
         conexion.conex.commit()
         return listado

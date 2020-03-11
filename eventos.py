@@ -440,6 +440,7 @@ class Eventos():
                 variables.fac[2].set_text(str(precio[0]))
                 total = float(snoches) * float(precio[0])
                 variables.fac[3].set_text(str(total))
+                funcionesser.listadoser()
                 listado = funcionesser.listafac2()
                 for preciofac in listado:
                     if preciofac[0] not in ("comida", "desayuno", "parking"):
