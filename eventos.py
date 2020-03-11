@@ -17,7 +17,7 @@ class Eventos():
             variables.venacercade.connect('delete-event', lambda w, e: w.hide() or True)
             variables.venacercade.show()
         except:
-            print('error abrira acerca de')
+            print('error abrira acerca de barra herramientas')
 
     def on_btnCerrarabout_clicked(self, widget):
         try:
