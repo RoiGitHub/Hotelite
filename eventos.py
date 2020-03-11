@@ -560,6 +560,12 @@ class Eventos():
         except:
             print('error actualizar precio')
 
+    def on_btImprestool_clicked(self, widget):
+        try:
+            impresionclientes.listaclientes()
+        except:
+            print('Error al generar listado de clientes')
+
     def on_btnSalirPrecios_clicked(self, widget):
         try:
             variables.venprecios.connect('delete-event', lambda w, e: w.hide() or True)
